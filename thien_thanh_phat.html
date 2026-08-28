@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiên Thành Phát | Garage sửa chữa ô tô Nhà Bè</title>
+  <meta name="description" content="Công ty TNHH MTV Thiên Thành Phát - Garage sửa chữa ô tô tại 477/5 Nguyễn Thị Hương, Nhà Bè, Hồ Chí Minh.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f7f9;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:#111827;color:#fff;padding:10px 6%;display:flex;justify-content:space-between;gap:20px;font-size:14px}
+    header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+    nav{max-width:1200px;margin:auto;padding:16px 6%;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px}
+    .logo-icon{width:44px;height:44px;border-radius:12px;background:#dc2626;color:#fff;display:grid;place-items:center;font-size:22px}
+    .navlinks{display:flex;gap:26px;font-weight:600;color:#374151}
+    .navlinks a:hover{color:#dc2626}
+    .menu{display:none;font-size:26px}
+    .hero{min-height:620px;display:grid;place-items:center;text-align:center;color:#fff;position:relative;background:
+      linear-gradient(rgba(10,15,25,.72),rgba(10,15,25,.76)),
+      url("https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmfUkN8OAiBu8iSRRU7FJ_9Slwl7vL0a0eImbt2zxm-4mcZFp2SodNtysuOswGnLpJlhs7MHKJ8LZijC1Cjr5-qPgPMSJTrHHfST3L6jh1QZQTbDdo9wmc_P3RJeH1zPzhVk8wCKFZDan3p=w224-h298-k-no") center/cover;
+    }
+    .hero-inner{max-width:900px;padding:70px 20px}
+    .badge{display:inline-block;background:#dc2626;padding:8px 15px;border-radius:999px;font-weight:700;margin-bottom:18px}
+    h1{font-size:clamp(38px,6vw,70px);line-height:1.05;margin-bottom:20px}
+    .hero p{font-size:20px;max-width:720px;margin:0 auto 30px;color:#e5e7eb}
+    .buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+    .btn{padding:14px 24px;border-radius:10px;font-weight:800;display:inline-block;transition:.2s}
+    .btn-red{background:#dc2626;color:#fff}.btn-red:hover{background:#b91c1c;transform:translateY(-2px)}
+    .btn-white{background:#fff;color:#111827}.btn-white:hover{transform:translateY(-2px)}
+    section{padding:80px 6%}
+    .container{max-width:1200px;margin:auto}
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title span{color:#dc2626;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    .section-title h2{font-size:38px;margin-top:6px}
+    .section-title p{color:#6b7280;margin-top:8px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 8px 30px rgba(17,24,39,.07);border:1px solid #eef0f3}
+    .icon{font-size:34px;margin-bottom:15px}.card h3{font-size:21px;margin-bottom:8px}.card p{color:#667085}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-img{height:440px;border-radius:22px;background:url("https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQwQ1gpLyKqPE5OOjS16Yz1rmwbk3_1fX1hIPnO9YjSUFHytkG4I6Ch0FPKFreWtPnKmV5wGefetTanPUR9abxZCNjvCJ7PEud_VIROf-kap00XVOt0PF0qpq0QpeVW5s-IB27nXyI6Tw=w224-h298-k-no") center/cover;box-shadow:0 15px 40px rgba(0,0,0,.15)}
+    .about h2{font-size:40px;line-height:1.15;margin:10px 0 18px}.about p{color:#667085;margin-bottom:18px}
+    .checks{list-style:none;display:grid;gap:12px;margin:20px 0}.checks li:before{content:"✓";color:#16a34a;font-weight:900;margin-right:10px}
+    .rating{background:#111827;color:#fff}
+    .rating-grid{display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:center}
+    .big-rating{font-size:72px;font-weight:900;color:#fbbf24;line-height:1}.stars{color:#fbbf24;font-size:25px;margin:10px 0}.rating small{color:#9ca3af}
+    .reviews{display:grid;gap:15px}.review{background:#1f2937;padding:22px;border-radius:15px}.review strong{display:block;margin-bottom:5px}.review .stars{font-size:16px;margin:0 0 6px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery img{width:100%;height:280px;object-fit:cover;border-radius:16px}
+    .contact{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{padding:32px;background:#f8fafc;border-radius:18px}.contact-item{display:flex;gap:15px;margin:20px 0}.contact-item b{display:block}.contact-item span{color:#667085}
+    footer{background:#0b1120;color:#cbd5e1;padding:35px 6%}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-name{color:#fff;font-weight:800;font-size:19px}
+    @media(max-width:800px){
+      .navlinks{display:none}.menu{display:block}.topbar{justify-content:center}.topbar span:first-child{display:none}
+      .cards,.about-grid,.rating-grid,.contact-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}
+      .about-img{height:320px}.hero{min-height:560px}section{padding:60px 5%}
+    }
+    @media(max-width:520px){.gallery{grid-template-columns:1fr}.gallery img{height:230px}.section-title h2{font-size:30px}.about h2{font-size:32px}}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span>🔧 Garage sửa chữa ô tô chuyên nghiệp</span>
+    <span>📞 0937 813 143</span>
+  </div>
+
+  <header>
+    <nav>
+      <a class="logo" href="#trang-chu">
+        <div class="logo-icon">⚙</div>
+        <div>THIÊN THÀNH PHÁT</div>
+      </a>
+      <div class="navlinks">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#dich-vu">Dịch vụ</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#danh-gia">Đánh giá</a>
+        <a href="#lien-he">Liên hệ</a>
+      </div>
+      <div class="menu">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="trang-chu">
+      <div class="hero-inner">
+        <div class="badge">⭐ 5.0/5 từ khách hàng</div>
+        <h1>Thiên Thành Phát</h1>
+        <p>Garage sửa chữa ô tô tận tâm, uy tín và chuyên nghiệp tại Nhà Bè, TP. Hồ Chí Minh.</p>
+        <div class="buttons">
+          <a class="btn btn-red" href="tel:0937813143">📞 Gọi ngay</a>
+          <a class="btn btn-white" href="#lien-he">📍 Xem địa chỉ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="dich-vu">
+      <div class="container">
+        <div class="section-title">
+          <span>Dịch vụ</span>
+          <h2>Chăm sóc xe toàn diện</h2>
+          <p>Kiểm tra kỹ lưỡng – tư vấn rõ ràng – sửa chữa tận tâm.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="icon">🔧</div><h3>Sửa chữa ô tô</h3><p>Kiểm tra và khắc phục các vấn đề kỹ thuật, giúp xe vận hành ổn định và an toàn.</p></div>
+          <div class="card"><div class="icon">⚙️</div><h3>Bảo dưỡng định kỳ</h3><p>Chăm sóc, kiểm tra các hạng mục quan trọng để duy trì tình trạng xe tốt.</p></div>
+          <div class="card"><div class="icon">🚗</div><h3>Phụ tùng & thay thế</h3><p>Tư vấn phương án thay thế phù hợp với nhu cầu và tình trạng thực tế của xe.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="gioi-thieu">
+      <div class="container about-grid">
+        <div class="about-img"></div>
+        <div>
+          <span style="color:#dc2626;font-weight:800">VỀ CHÚNG TÔI</span>
+          <h2>Uy tín được xây dựng từ sự tận tâm</h2>
+          <p>Thiên Thành Phát là xưởng sửa chữa ô tô tại Nhà Bè, phục vụ khách hàng với tiêu chí minh bạch, tận tâm và hợp lý.</p>
+          <ul class="checks">
+            <li>Kỹ thuật viên có tay nghề</li>
+            <li>Tư vấn tận tình, rõ ràng</li>
+            <li>Chi phí sửa chữa hợp lý</li>
+            <li>Ưu tiên chất lượng và sự an tâm của khách hàng</li>
+          </ul>
+          <a class="btn btn-red" href="tel:0937813143">Liên hệ Garage</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="danh-gia" class="rating">
+      <div class="container">
+        <div class="section-title">
+          <span>Khách hàng nói gì</span>
+          <h2>Đánh giá 5.0 ⭐</h2>
+          <p style="color:#9ca3af">3 bài đánh giá trên Google Maps theo thông tin được cung cấp.</p>
+        </div>
+        <div class="rating-grid">
+          <div style="text-align:center">
+            <div class="big-rating">5.0</div>
+            <div class="stars">★★★★★</div>
+            <small>3 đánh giá</small>
+          </div>
+          <div class="reviews">
+            <div class="review"><strong>Nguyễn Thanh Tuân</strong><div class="stars">★★★★★</div><p>“Garage Giáp luôn luôn sửa chữa tận tâm và uy tín. Tư vấn tận tình, chiều lòng khách hết mực.”</p></div>
+            <div class="review"><strong>Tuan Phan</strong><div class="stars">★★★★★</div><p>“Garage sửa chữa xe ô tô uy tín, nhân viên kỹ thuật có tay nghề, chi phí sửa chữa và thay thế phụ tùng hợp lý.”</p></div>
+            <div class="review"><strong>van N Ph</strong><div class="stars">★★★★★</div><p>“Good services, Good price.”</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hinh-anh">
+      <div class="container">
+        <div class="section-title">
+          <span>Hình ảnh</span>
+          <h2>Không gian xưởng</h2>
+          <p>Một vài hình ảnh được cung cấp từ thông tin Google Maps.</p>
+        </div>
+        <div class="gallery">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQwQ1gpLyKqPE5OOjS16Yz1rmwbk3_1fX1hIPnO9YjSUFHytkG4I6Ch0FPKFreWtPnKmV5wGefetTanPUR9abxZCNjvCJ7PEud_VIROf-kap00XVOt0PF0qpq0QpeVW5s-IB27nXyI6Tw=w224-h298-k-no" alt="Hình ảnh garage">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmfUkN8OAiBu8iSRRU7FJ_9Slwl7vL0a0eImbt2zxm-4mcZFp2SodNtysuOswGnLpJlhs7MHKJ8LZijC1Cjr5-qPgPMSJTrHHfST3L6jh1QZQTbDdo9wmc_P3RJeH1zPzhVk8wCKFZDan3p=w224-h298-k-no" alt="Công xưởng">
+          <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BdtLEKKnFBSFjIssBfKj3Q&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=311.18576&pitch=0&thumbfov=100" alt="Chế độ xem garage">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="lien-he">
+      <div class="container">
+        <div class="section-title">
+          <span>Liên hệ</span>
+          <h2>Đưa xe đến Thiên Thành Phát</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <div class="contact-item"><div>📍</div><div><b>Địa chỉ</b><span>477/5 Nguyễn Thị Hương, Nhà Bè, Hồ Chí Minh, Việt Nam</span></div></div>
+            <div class="contact-item"><div>📞</div><div><b>Điện thoại</b><span>0937 813 143</span></div></div>
+            <div class="contact-item"><div>🕐</div><div><b>Giờ hoạt động</b><span>Mở cửa từ 7:00</span></div></div>
+            <a class="btn btn-red" href="tel:0937813143">Gọi 0937 813 143</a>
+          </div>
+          <div class="contact-box" style="padding:0;overflow:hidden;min-height:350px">
+            <iframe
+              src="https://www.google.com/maps?q=477/5%20Nguyễn%20Thị%20Hương,%20Nhà%20Bè,%20Hồ%20Chí%20Minh&output=embed"
+              width="100%" height="100%" style="border:0;min-height:350px" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-name">CÔNG TY TNHH MTV THIÊN THÀNH PHÁT</div><div>Garage sửa chữa ô tô tại Nhà Bè</div></div>
+      <div>© 2026 Thiên Thành Phát. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
